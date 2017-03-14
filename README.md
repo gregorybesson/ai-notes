@@ -13,9 +13,6 @@ algorithms, it refers to a function that provides an estimate of solution cost.
 
 ## contingency problem
 
-## Pruning 
-allows us to ignore portions of the search tree that make no difference to the final choice
-
 ## Game
 A game can be formally defined as a kind of search problem with the following components:
 - The initial state, which includes the board position and an indication of whose move it is.
@@ -51,11 +48,14 @@ A more sophisticated cutoff test is needed. The evaluation function should only 
 ## The horizon effect
 The horizon problem is more difficult to eliminate. It arises when the program is facing a move by the opponent that causes serious damage and is ultimately unavoidable.
 
+## Pruning
+The process of eliminating a branch of the search tree from consideration without examining it is called pruning the search tree.
 
-# The branching factor
+## Alpha-Beta pruning
+When applied to a standard minimax tree, it returns the same move as minimax would, but prunes away branches that cannot possibly influence the final decision. The general principle is this. Consider a node n somewhere in the tree such that Player has a choice of moving to that node. If Player has a better choice ra either at the parent node of n, or at any choice point further up, then n will never be reached in actual play.
+So once we have found out enough about n (by examining some of its descendants) to reach this conclusion, we can prune it.
 
-# Iterative deepening
+The effectiveness of alpha-beta depends on the ordering in which the successors are examined.
+If we assume that this can be done, then it turns out that alpha-beta only needs to examine O(b power d/2) nodes to pick the best move, instead of O(b power d) with minimax.
 
-# Alpha-Beta pruning
-
-# Expectimax
+## The branching factor
