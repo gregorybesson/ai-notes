@@ -35,6 +35,9 @@ to decide what the best first move is. The algorithm consists of five steps:
 - Continue backing up the values from the leaf nodes toward the root, one layer at a time.
 - Eventually, the backed-up values reach the top of the tree; at that point, the AI player chooses the move that leads to the highest value. This is called the minimax decision, because it maximizes the utility under the assumption that the opponent will play perfectly to minimize it.
 
+## Imperfect decisions
+The minimax algorithm assumes that the program has time to search all the way to terminal states, which is usually not practical. Instead of going all the way to terminal states and using the utility function, we could cut off the search earlier and apply a *heuristic evaluation function* to the leaves of the tree.
+
 # Building a game tree
 
 # minimax function
