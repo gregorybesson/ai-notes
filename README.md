@@ -21,7 +21,7 @@ A game can be formally defined as a kind of search problem with the following co
 - A utility function (also called a payoff function), which gives a numeric value for the outcome of a game. In chess, the outcome is a win, loss, or draw, which we can represent by the values +1, —1, or 0. Some games have a wider variety of possible outcomes; for example, the payoffs in backgammon range from +192 to —192.
 
 ## Minimax algorithm
-In an opponent game, the mininiax algorithm is designed to determine the optimal strategy for the AI player, and thus
+In an opponent game, the minimax algorithm is designed to determine the optimal strategy for the AI player, and thus
 to decide what the best first move is. The algorithm consists of five steps:
 - Generate the whole game tree, all the way down to the terminal states.
 - Apply the utility function to each terminal state to get its value.
