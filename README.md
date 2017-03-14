@@ -11,6 +11,15 @@ that improves the average-case performance on a problem-solving task, but does
 not necessarily improve the worst-case performance. In the specific area of search
 algorithms, it refers to a function that provides an estimate of solution cost.
 
+## contingency problem
+
+## Pruning 
+allows us to ignore portions of the search tree that make no difference to the final choice
+
+## heuristic evaluation functions
+allow us to approximate the true utility of a state without doing a complete search
+
+
 # Building a game tree
 
 # minimax function
