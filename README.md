@@ -16,9 +16,6 @@ algorithms, it refers to a function that provides an estimate of solution cost.
 ## Pruning 
 allows us to ignore portions of the search tree that make no difference to the final choice
 
-## heuristic evaluation functions
-allow us to approximate the true utility of a state without doing a complete search
-
 ## Game
 A game can be formally defined as a kind of search problem with the following components:
 - The initial state, which includes the board position and an indication of whose move it is.
@@ -36,17 +33,23 @@ to decide what the best first move is. The algorithm consists of five steps:
 - Eventually, the backed-up values reach the top of the tree; at that point, the AI player chooses the move that leads to the highest value. This is called the minimax decision, because it maximizes the utility under the assumption that the opponent will play perfectly to minimize it.
 
 ## Imperfect decisions
-The minimax algorithm assumes that the program has time to search all the way to terminal states, which is usually not practical. Instead of going all the way to terminal states and using the utility function, we could cut off the search earlier and apply a *heuristic evaluation function* to the leaves of the tree.
+The minimax algorithm assumes that the program has time to search all the way to terminal states, which is usually not practical. Instead of going all the way to terminal states and using the utility function, we could *cut off the search* earlier and apply a *heuristic evaluation function* to the leaves of the tree.
+
+## Heuristic evaluation functions
+allow us to approximate the true utility of a state without doing a complete search.
+How exactly do we measure quality?
+- First, the evaluation function must agree with the utility function on terminal states. 
+- Second, it must not take too long.  Hence, there is a trade-off between the accuracy of the evaluation function and its time cost. 
+- Third, an evaluation function should accurately reflect the actual chances of winning.
+
+## Cutting off search
+The most straightforward approach to controlling the amount of search is to set a fixed depth limit, so that the cutoff test succeeds for all nodes at or below depth d. The depth is chosen so that the amount of time used will not exceed what the rules of the game allow. A slightly more robust approach is to apply *iterative deepening*. When time runs out, the program returns the move selected by the deepest completed search.
 
 # Building a game tree
-
-# minimax function
 
 # The branching factor
 
 # Depth-Limited search
-
-# Evaluation function
 
 # Quiescent search
 
