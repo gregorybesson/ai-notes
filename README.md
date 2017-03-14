@@ -45,6 +45,9 @@ How exactly do we measure quality?
 ## Cutting off search
 The most straightforward approach to controlling the amount of search is to set a fixed depth limit, so that the cutoff test succeeds for all nodes at or below depth d. The depth is chosen so that the amount of time used will not exceed what the rules of the game allow. A slightly more robust approach is to apply *iterative deepening*. When time runs out, the program returns the move selected by the deepest completed search.
 
+## Quiescent search
+A more sophisticated cutoff test is needed. The evaluation function should only be applied to positions that are quiescent, that is, unlikely to exhibit wild swings in value in the near future. Nonquiescent positions can be expanded further until quiescent positions are reached. This extra search is called a *quiescence search*; sometimes it is restricted to consider only certain types of moves, such as capture moves, that will quickly resolve the uncertainties in the position.
+
 # Building a game tree
 
 # The branching factor
