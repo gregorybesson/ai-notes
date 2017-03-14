@@ -48,17 +48,13 @@ The most straightforward approach to controlling the amount of search is to set 
 ## Quiescent search
 A more sophisticated cutoff test is needed. The evaluation function should only be applied to positions that are quiescent, that is, unlikely to exhibit wild swings in value in the near future. Nonquiescent positions can be expanded further until quiescent positions are reached. This extra search is called a *quiescence search*; sometimes it is restricted to consider only certain types of moves, such as capture moves, that will quickly resolve the uncertainties in the position.
 
-# Building a game tree
+## The horizon effect
+The horizon problem is more difficult to eliminate. It arises when the program is facing a move by the opponent that causes serious damage and is ultimately unavoidable.
+
 
 # The branching factor
 
-# Depth-Limited search
-
-# Quiescent search
-
 # Iterative deepening
-
-# Horizon effect
 
 # Alpha-Beta pruning
 
