@@ -19,6 +19,12 @@ allows us to ignore portions of the search tree that make no difference to the f
 ## heuristic evaluation functions
 allow us to approximate the true utility of a state without doing a complete search
 
+## Game
+A game can be formally defined as a kind of search problem with the following components:
+- The initial state, which includes the board position and an indication of whose move it is.
+- A set of operators, which define the legal moves that a player can make.
+- A terminal test, which determines when the game is over. States where the game has ended are called terminal states.
+- A utility function (also called a payoff function), which gives a numeric value for the outcome of a game. In chess, the outcome is a win, loss, or draw, which we can represent by the values +1, —1, or 0. Some games have a wider variety of possible outcomes; for example, the payoffs in backgammon range from +192 to —192.
 
 # Building a game tree
 
