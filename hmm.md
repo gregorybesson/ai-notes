@@ -47,3 +47,7 @@ We then can calculate the Viterbi path.
 
 ## Baum-Welch re-estimation
 Better estmation
+
+## Stochastic beam search
+
+
